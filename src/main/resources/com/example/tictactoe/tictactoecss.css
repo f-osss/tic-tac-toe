@@ -1,10 +1,6 @@
 .root {
-   -fx-background-color: grey;
+    -fx-background-color: grey;
     -fx-transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-.root:hover{
-    -fx-background-color:black; /* Change background color on hover */
 }
 
 .button {

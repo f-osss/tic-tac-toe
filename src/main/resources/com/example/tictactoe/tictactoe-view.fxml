@@ -56,6 +56,8 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Label fx:id="userName" layoutX="20.0" layoutY="14.0" />
+
+      <Label fx:id="userName1" alignment="TOP_LEFT" layoutX="20.0" layoutY="33.0" />
+      <Label fx:id="userName2" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="814.0" layoutY="33.0" />
    </children>
 </AnchorPane>
