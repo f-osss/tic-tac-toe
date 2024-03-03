@@ -23,7 +23,7 @@ public class tictactoe extends Application {
 
         Scene scene = new Scene(grid.load());
 
-        primaryStage.getIcons().add(new Image(new File("src/tic.png").toURI().toString()));
+        primaryStage.getIcons().add(new Image(getClass().getResource("/images/tic.png").toString()));
         primaryStage.setTitle("Tic-Tac-Toe game");
         primaryStage.setScene(scene);
         primaryStage.show();

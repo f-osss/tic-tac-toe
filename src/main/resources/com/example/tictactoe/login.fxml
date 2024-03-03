@@ -7,12 +7,10 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="701.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.tictactoe.loginController">
+<AnchorPane prefHeight="701.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tictactoe.loginController">
     <stylesheets>
-        <URL value="@login.css"/>
+        <URL value="@login.css" />
     </stylesheets>
 
     <children>
@@ -20,30 +18,27 @@
         <!-- Player 1 -->
         <Label layoutX="50.0" layoutY="50.0" text="Player 1:">
         </Label>
-        <TextField fx:id="nameTextField1" layoutX="150.0" layoutY="50.0"/>
-        <RadioButton fx:id="player1X" layoutX="150.0" layoutY="100.0" mnemonicParsing="false" text="X">
+        <TextField fx:id="nameTextField1" layoutX="150.0" layoutY="50.0" />
+        <RadioButton fx:id="player1X" layoutX="150.0" layoutY="100.0" mnemonicParsing="false" onAction="#handlePlayer1Selection" text="X">
             <toggleGroup>
-                <ToggleGroup fx:id="player1"/>
+                <ToggleGroup fx:id="player1" />
             </toggleGroup>
         </RadioButton>
-        <RadioButton fx:id="player1Y" layoutX="200.0" layoutY="100.0" mnemonicParsing="false" text="Y"
-                     toggleGroup="$player1"/>
+        <RadioButton fx:id="player1O" layoutX="200.0" layoutY="100.0" mnemonicParsing="false" onAction="#handlePlayer1Selection" text="O" toggleGroup="$player1" />
 
         <!--Player 2-->
         <Label layoutX="50.0" layoutY="200.0" text="Player 2:">
         </Label>
-        <TextField fx:id="nameTextField2" layoutX="150.0" layoutY="200.0"/>
-        <RadioButton fx:id="player2X" layoutX="150.0" layoutY="250.0" mnemonicParsing="false" text="X">
+        <TextField fx:id="nameTextField2" layoutX="150.0" layoutY="200.0" />
+        <RadioButton fx:id="player2X" layoutX="150.0" layoutY="250.0" mnemonicParsing="false" onAction="#handlePlayer2Selection" text="X">
             <toggleGroup>
-                <ToggleGroup fx:id="player2"/>
+                <ToggleGroup fx:id="player2" />
             </toggleGroup>
         </RadioButton>
-        <RadioButton fx:id="player2Y" layoutX="200.0" layoutY="250.0" mnemonicParsing="false" text="Y"
-                     toggleGroup="$player2"/>
+        <RadioButton fx:id="player2O" layoutX="200.0" layoutY="250.0" mnemonicParsing="false" onAction="#handlePlayer2Selection" text="O" toggleGroup="$player2" />
 
 
         <!-- Play-->
-        <Button fx:id="loginbutton" layoutX="300.0" layoutY="350.0" mnemonicParsing="false" onAction="#changeScene"
-                text="Play"/>
+        <Button fx:id="loginbutton" layoutX="300.0" layoutY="350.0" mnemonicParsing="false" onAction="#changeScene" text="Play" />
     </children>
 </AnchorPane>
