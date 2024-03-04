@@ -5,7 +5,7 @@ A tic tac toe game with Java, using Javafx as the GUI. You need javafx installed
 It runs fine currently but its still in progress
 
 
-`src
+```src
 ├── java
 │   ├── com
 │   │   └── example
@@ -25,4 +25,4 @@ It runs fine currently but its still in progress
 └── images
 ├── o.png
 ├── tic.png
-└── x.png`
+└── x.png```
