@@ -23,11 +23,12 @@ public class tictactoeController {
     @FXML
     private ImageView player2Symbol;
 
-    private char currentPlayer;
-    private char gameBoard[][] = new char[3][3];
     @FXML
     private Label player1Win, player2Win;
 
+
+    private char currentPlayer;
+    private char gameBoard[][] = new char[3][3];
     private int player1count;
     private int player2count;
 
@@ -76,11 +77,13 @@ public class tictactoeController {
         }
     }
 
+
     private void switchPlayers() {
         if (currentPlayer == 'X') {
             currentPlayer = 'O';
         } else {
             currentPlayer = 'X';
+
         }
     }
 
@@ -117,7 +120,6 @@ public class tictactoeController {
         if (button.getText().isEmpty()) {
             button.setText(String.valueOf(currentPlayer));
 
-
             if (currentPlayer == player1Char) {
                 player2Symbol.setVisible(false);
                 player1Symbol.setVisible(true);
@@ -147,6 +149,10 @@ public class tictactoeController {
         }
 
         if (gameBoard[0][0] == gameBoard[1][1] && gameBoard[1][1] == gameBoard[2][2] && gameBoard[0][0] != ' ' && gameBoard[1][1] != ' ' && gameBoard[2][2] != ' ') {
+            win(gameBoard[0][0]);
+        }
+
+        if (gameBoard[2][0] == gameBoard[1][1] && gameBoard[1][1] == gameBoard[0][2] && gameBoard[2][0] != ' ' && gameBoard[1][1] != ' ' && gameBoard[0][2] != ' ') {
             win(gameBoard[0][0]);
         }
 
@@ -184,6 +190,13 @@ public class tictactoeController {
     }
 
     public void restart() {
+        clearBoard();
+
+        player1count = 0;
+        player2count = 0;
+
+        player1Win.setText("0");
+        player2Win.setText("0");
     }
 
     public void clearBoard() {

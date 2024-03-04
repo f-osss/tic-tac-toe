@@ -28,17 +28,17 @@ public class tictactoe extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-//        primaryStage.setOnCloseRequest(event -> {
-//            event.consume();
-//            logout(primaryStage);
-//        });
+        primaryStage.setOnCloseRequest(event -> {
+            event.consume();
+            logout(primaryStage);
+        });
     }
 
     public void logout(Stage e) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout");
         alert.setHeaderText("Confirm exit");
-        alert.setContentText("Are you sure you want to exit");
+        alert.setContentText("Are you sure you want to quit the game");
 
         if (alert.showAndWait().get() == ButtonType.OK) {
             e.close();

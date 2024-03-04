@@ -61,7 +61,7 @@
         <!--Player 1-->
         <Label fx:id="userName1" alignment="TOP_LEFT" layoutX="20.0" layoutY="33.0" />
         <ImageView fx:id="player1Symbol" fitHeight="30.0" fitWidth="30.0" layoutX="80.0" layoutY="33.0" />
-        <Label fx:id="player1Win" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="79.0" prefHeight="27.0" prefWidth="30.0">
+        <Label fx:id="player1Win" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="79.0" prefHeight="27.0" prefWidth="30.0" text="0">
             <font>
                 <Font name="System Bold Italic" size="36.0" />
             </font>
@@ -71,11 +71,14 @@
         <!--Player 2-->
         <Label fx:id="userName2" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="814.0" layoutY="33.0" />
         <ImageView fx:id="player2Symbol" fitHeight="30.0" fitWidth="30.0" layoutX="774.0" layoutY="33.0" />
-        <Label fx:id="player2Win" alignment="CENTER" contentDisplay="CENTER" layoutX="747.0" layoutY="79.0" prefHeight="27.0" prefWidth="30.0">
+        <Label fx:id="player2Win" alignment="CENTER" contentDisplay="CENTER" layoutX="747.0" layoutY="79.0" prefHeight="27.0" prefWidth="30.0" text="0">
             <font>
                 <Font size="36.0" />
             </font>
         </Label>
+
+<!--        &lt;!&ndash;Restart&ndash;&gt;-->
+<!--        <Button fx:id="restart" layoutX="300" layoutY="33.0" onAction="#restart"/>-->
 
     </children>
 </AnchorPane>

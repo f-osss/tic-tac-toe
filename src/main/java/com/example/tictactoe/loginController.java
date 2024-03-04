@@ -38,6 +38,7 @@ public class loginController {
         tictactoeController tictac = loader.getController();
         tictac.displayName(username1, username2);
         tictac.initialize(player1Symbol, player2Symbol);
+
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
