@@ -60,7 +60,7 @@
 
       <!--Player 1-->
       <Label fx:id="userName1" alignment="TOP_LEFT" layoutX="20.0" layoutY="33.0" />
-      <ImageView fx:id="player1Symbol" layoutX="180.0" layoutY="33.0" fitWidth="30.0" fitHeight="30.0" />
+      <ImageView fx:id="player1Symbol" layoutX="80.0" layoutY="33.0" fitWidth="30.0" fitHeight="30.0" />
 
       <!--Player 2-->
       <Label fx:id="userName2" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="814.0" layoutY="33.0" />

@@ -24,8 +24,6 @@ public class tictactoeController {
     }
 
     public void initialize(char player1, char player2) {
-//        Image xImage = new Image("C:\\Users\\salam\\github\\tic-tac-toe\\src\\x.png");
-
         Image xImage = new Image(getClass().getResource("/images/x.png").toString());
         Image oImage = new Image(getClass().getResource("/images/o.png").toString());
 
