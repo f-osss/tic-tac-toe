@@ -13,19 +13,35 @@ src
 │   │       └── tictactoe
 
 │   │           ├── loginController.java
+
 │   │           ├── tictactoe.java
+
 │   │           └── tictactoeController.java
+
 │   ├── module-info.java
+
 └── resources
+
     ├── com
+    
     │   └── example
+    
     │       └── tictactoe
+    
     │           ├── login.css
+    
     │           ├── login.fxml
+    
     │           ├── tictactoe-view.fxml
+    
     │           └── tictactoecss.css
+    
     └── images
+    
         ├── o.png
+        
         ├── tic.png
+        
         └── x.png
+        
 
