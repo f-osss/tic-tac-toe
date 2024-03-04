@@ -8,63 +8,74 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="701.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tictactoe.tictactoeController">
-   <stylesheets>
-      <URL value="@tictactoecss.css" />
-   </stylesheets>
-   <children>
-      <Button fx:id="topleft" alignment="CENTER" layoutX="244.0" layoutY="124.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="136.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="topmiddle" alignment="CENTER" layoutX="378.0" layoutY="124.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="136.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="topright" alignment="CENTER" layoutX="514.0" layoutY="124.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="136.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="middleleft" alignment="CENTER" layoutX="244.0" layoutY="265.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="136.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="middlemiddle" alignment="CENTER" layoutX="378.0" layoutY="265.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="136.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="middleright" alignment="CENTER" layoutX="514.0" layoutY="265.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="136.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="bottomleft" alignment="CENTER" layoutX="244.0" layoutY="409.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="136.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="bottommiddle" alignment="CENTER" layoutX="378.0" layoutY="409.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="136.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="bottomright" alignment="CENTER" layoutX="514.0" layoutY="409.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="136.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
+    <stylesheets>
+        <URL value="@tictactoecss.css" />
+    </stylesheets>
+    <children>
+        <Button fx:id="TL" alignment="CENTER" layoutX="244.0" layoutY="124.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="144.0" prefWidth="136.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="TM" alignment="CENTER" layoutX="378.0" layoutY="124.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="144.0" prefWidth="136.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="TR" alignment="CENTER" layoutX="514.0" layoutY="124.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="144.0" prefWidth="136.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="ML" alignment="CENTER" layoutX="244.0" layoutY="265.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="144.0" prefWidth="136.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="MM" alignment="CENTER" layoutX="378.0" layoutY="265.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="144.0" prefWidth="136.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="MR" alignment="CENTER" layoutX="514.0" layoutY="265.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="144.0" prefWidth="136.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="BL" alignment="CENTER" layoutX="244.0" layoutY="409.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="144.0" prefWidth="136.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="BM" alignment="CENTER" layoutX="378.0" layoutY="409.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="144.0" prefWidth="136.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="BR" alignment="CENTER" layoutX="514.0" layoutY="409.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="144.0" prefWidth="136.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
 
-      <!--Player 1-->
-      <Label fx:id="userName1" alignment="TOP_LEFT" layoutX="20.0" layoutY="33.0" />
-      <ImageView fx:id="player1Symbol" layoutX="80.0" layoutY="33.0" fitWidth="30.0" fitHeight="30.0" />
+        <!--Player 1-->
+        <Label fx:id="userName1" alignment="TOP_LEFT" layoutX="20.0" layoutY="33.0" />
+        <ImageView fx:id="player1Symbol" fitHeight="30.0" fitWidth="30.0" layoutX="80.0" layoutY="33.0" />
+        <Label fx:id="player1Win" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="79.0" prefHeight="27.0" prefWidth="30.0">
+            <font>
+                <Font name="System Bold Italic" size="36.0" />
+            </font>
+        </Label>
 
-      <!--Player 2-->
-      <Label fx:id="userName2" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="814.0" layoutY="33.0" />
-      <ImageView fx:id="player2Symbol" layoutX="774.0" layoutY="33.0" fitWidth="30.0" fitHeight="30.0" />
 
-   </children>
+        <!--Player 2-->
+        <Label fx:id="userName2" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="814.0" layoutY="33.0" />
+        <ImageView fx:id="player2Symbol" fitHeight="30.0" fitWidth="30.0" layoutX="774.0" layoutY="33.0" />
+        <Label fx:id="player2Win" alignment="CENTER" contentDisplay="CENTER" layoutX="747.0" layoutY="79.0" prefHeight="27.0" prefWidth="30.0">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+
+    </children>
 </AnchorPane>
