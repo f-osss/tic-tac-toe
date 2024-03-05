@@ -6,35 +6,32 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.event.ActionEvent;
+import javafx.scene.paint.Color;
 
 public class tictactoeController {
 
     @FXML
-    Button TL, TM, TR, MR, MM, ML, BR, BM, BL;
+    Button TL, TM, TR, MR, MM, ML, BR, BM, BL; //the buttons
 
     @FXML
-    Label userName1;
-    @FXML
-    Label userName2;
+    Label userName1, userName2; //username of players
 
     @FXML
-    private ImageView player1Symbol;
+    private ImageView player1Symbol, player2Symbol; //symbol of players
 
     @FXML
-    private ImageView player2Symbol;
+    private Label player1Win, player2Win; //labels to show scores
 
-    @FXML
-    private Label player1Win, player2Win;
+    private char currentPlayer; //current player
+    private char gameBoard[][] = new char[3][3]; //array to represent the game board
+    private int player1count, player2count; //count of player scores
 
-    private char currentPlayer;
-    private char gameBoard[][] = new char[3][3];
-    private int player1count;
-    private int player2count;
-
-    private char player1Char;
-    private char player2Char;
+    private char player1Char, player2Char; //char of players (X or O)
 
 
+    /**
+     * displays the name the user inputted in the login screen on the game screen
+     **/
     public void displayName(String name1, String name2) {
         userName1.setText(name1);
         userName2.setText(name2);
@@ -106,7 +103,6 @@ public class tictactoeController {
 
         if (colString.equals("L")) {
             col = 0;
-
         } else if (colString.equals("M")) {
             col = 1;
         } else if (colString.equals("R")) {
@@ -164,14 +160,18 @@ public class tictactoeController {
 
         if (winner == 'X') {
             if (player1Char == 'X') {
+                player1Win.setTextFill(Color.web("#46dc14"));
                 player1Win.setText(String.valueOf(++player1count));
             } else if (player2Char == 'X') {
+                player1Win.setTextFill(Color.web("#46dc14"));
                 player2Win.setText(String.valueOf(++player2count));
             }
         } else if (winner == 'O') {
             if (player1Char == 'O') {
+                player1Win.setTextFill(Color.web("#46dc14"));
                 player1Win.setText(String.valueOf(++player1count));
             } else if (player2Char == 'O') {
+                player2Win.setTextFill(Color.web("#46dc14"));
                 player2Win.setText(String.valueOf(++player2count));
             }
         }
@@ -195,8 +195,19 @@ public class tictactoeController {
         player1count = 0;
         player2count = 0;
 
+        player1Win.setTextFill(Color.web("White"));
         player1Win.setText("0");
+
+        player2Win.setTextFill(Color.web("White"));
         player2Win.setText("0");
+
+        if (currentPlayer == player1Char) {
+            player2Symbol.setVisible(false);
+            player1Symbol.setVisible(true);
+        } else if (currentPlayer == player2Char) {
+            player1Symbol.setVisible(false);
+            player2Symbol.setVisible(true);
+        }
     }
 
     public void clearBoard() {

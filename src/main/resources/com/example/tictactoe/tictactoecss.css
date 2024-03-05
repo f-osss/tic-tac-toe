@@ -19,3 +19,7 @@
     -fx-text-fill: white;
     -fx-font-size: 18px; /* Larger font size for player's name */
 }
+
+/*#player1Win, #player2Win{*/
+/*    -fx-text-fill: #46dc14;*/
+/*}*/
