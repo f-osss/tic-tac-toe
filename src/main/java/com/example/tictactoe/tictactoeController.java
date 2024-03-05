@@ -26,7 +26,6 @@ public class tictactoeController {
     @FXML
     private Label player1Win, player2Win;
 
-
     private char currentPlayer;
     private char gameBoard[][] = new char[3][3];
     private int player1count;
@@ -153,7 +152,7 @@ public class tictactoeController {
         }
 
         if (gameBoard[2][0] == gameBoard[1][1] && gameBoard[1][1] == gameBoard[0][2] && gameBoard[2][0] != ' ' && gameBoard[1][1] != ' ' && gameBoard[0][2] != ' ') {
-            win(gameBoard[0][0]);
+            win(gameBoard[2][0]);
         }
 
         if (draw(gameBoard)) {
@@ -162,6 +161,7 @@ public class tictactoeController {
     }
 
     public void win(char winner) {
+
         if (winner == 'X') {
             if (player1Char == 'X') {
                 player1Win.setText(String.valueOf(++player1count));
@@ -200,6 +200,7 @@ public class tictactoeController {
     }
 
     public void clearBoard() {
+
         for (int i = 0; i < gameBoard.length; i++) {
             for (int j = 0; j < gameBoard[i].length; j++) {
                 gameBoard[i][j] = ' ';
@@ -226,5 +227,6 @@ public class tictactoeController {
         BR.setDisable(false);
         BL.setDisable(false);
     }
+
 }
 
