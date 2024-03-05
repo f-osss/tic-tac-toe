@@ -6,7 +6,7 @@ It runs fine currently but its still in progress
 
 
 ```
-src
+src/main
 ├── java
 │   ├── com
 │   │   └── example
