@@ -29,5 +29,3 @@ src/main
     └── x.png
 ```
 
-###Login Screen
-! [Login screen] (https://github.com/f-osss/tic-tac-toe/blob/main/login%20screen%20tic%20tac%20toe.png?raw=true)
