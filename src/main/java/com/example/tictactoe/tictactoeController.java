@@ -163,7 +163,7 @@ public class tictactoeController {
                 player1Win.setTextFill(Color.web("#46dc14"));
                 player1Win.setText(String.valueOf(++player1count));
             } else if (player2Char == 'X') {
-                player1Win.setTextFill(Color.web("#46dc14"));
+                player2Win.setTextFill(Color.web("#46dc14"));
                 player2Win.setText(String.valueOf(++player2count));
             }
         } else if (winner == 'O') {
