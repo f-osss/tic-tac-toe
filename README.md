@@ -6,7 +6,7 @@ It runs fine currently but its still in progress
 
 
 ```
-src
+src/main
 ├── java
 │   ├── com
 │   │   └── example
@@ -14,17 +14,17 @@ src
 │   │           ├── loginController.java
 │   │           ├── tictactoe.java
 │   │           └── tictactoeController.java
-│   ├── module-info.java
+│   └── module-info.java
 └── resources
-├── com
-│   └── example
-│       └── tictactoe
-│           ├── login.css
-│           ├── login.fxml
-│           ├── tictactoe-view.fxml
-│           └── tictactoecss.css
-└── images
-├── o.png
-├── tic.png
-└── x.png
+  ├── com
+  │   └── example
+  │       └── tictactoe
+  │           ├── login.css
+  │           ├── login.fxml
+  │           ├── tictactoe-view.fxml
+  │           └── tictactoecss.css
+  └── images
+    ├── o.png
+    ├── tic.png
+    └── x.png
 ```
