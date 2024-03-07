@@ -1,6 +1,6 @@
 # tic-tac-toe
 
-A tic tac toe game with Java, using Javafx as the GUI. You need javafx installed to be able to run it
+A tic tac toe game with Java, using Javafx as the GUI. You need javafx libraries installed to be able to run it
 
 It runs fine currently but its still in progress
 
